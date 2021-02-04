@@ -3,10 +3,16 @@ const router = express.Router();
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 
-const { getTopArticles } = require("../api/index");
+const { getArticlesTop, getArticlesPopular } = require("../api/index");
 
 router.get("/top-articles/:topic", jsonParser, (req, res) => {
-  getTopArticles(req.params.topic).then((data) => {
+  getArticlesTop(req.params.topic).then((data) => {
+    res.json(data.results);
+  });
+});
+
+router.get("/most-popular/", jsonParser, (req, res) => {
+  getArticlesPopular().then((data) => {
     res.json(data.results);
   });
 });

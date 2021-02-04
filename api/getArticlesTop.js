@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const { BASE_URL, NY_TIMES_API } = require("../config");
 
-const getTopArticles = (section) => {
+const getArticlesTop = (section) => {
   const url =
     BASE_URL +
     "/svc/topstories/v2/" +
@@ -14,4 +14,4 @@ const getTopArticles = (section) => {
     .then((response) => response);
 };
 
-module.exports = { getTopArticles };
+module.exports = { getArticlesTop };

@@ -1,3 +1,4 @@
-const { getTopArticles } = require("./getTopArticles");
+const { getArticlesTop } = require("./getArticlesTop");
+const { getArticlesPopular } = require("./getArticlesPopular");
 
-module.exports = { getTopArticles };
+module.exports = { getArticlesTop, getArticlesPopular };
