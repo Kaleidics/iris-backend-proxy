@@ -11,7 +11,7 @@ const app = express();
 //CORS
 app.use(
   cors({
-    origin: [CORS_ACCESS],
+    origin: CORS_ACCESS,
   })
 );
 
